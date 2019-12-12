@@ -36,7 +36,6 @@ notesRouter
         })
       }
     }
-
     NotesService.insertNote(
       req.app.get('db'),
       newNote

@@ -17,6 +17,10 @@ app.use(morgan(morganOption))
 app.use(helmet())
 app.use(cors())
 
+/*
+
+No Authorization - for now
+
 app.use(function validateBearerToken(req, res, next) {
   const apiToken = process.env.API_TOKEN
   const authToken = req.get('Authorization')
@@ -26,6 +30,7 @@ app.use(function validateBearerToken(req, res, next) {
   }
   next()
 })
+*/
 
 app.use('/api/notes', notesRouter)
 app.use('/api/folders', foldersRouter)
